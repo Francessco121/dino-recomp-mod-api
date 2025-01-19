@@ -1781,8 +1781,15 @@ vram = 0x81083028
 size = 0xF50
 
 symbols = [
-    { name = "OSPiHandle_81083fb8", vram = 0x81083FB8 },
-    { name = "DAT_81083f50", vram = 0x81083F50 },
+    { name = "sFlashIoMesg", vram = 0x81083F68 },
+    { name = "sFlashDmaMqBuffer", vram = 0x81083F48 },
+    { name = "sFlashDmaMq", vram = 0x81083F50 },
+    { name = "sFlashReadIoMesg", vram = 0x81083F88 },
+    { name = "sFlashReadIdQueueBuffer", vram = 0x8108402C },
+    { name = "DAT_81084030", vram = 0x81084030 },
+    { name = "sFlashId", vram = 0x81083F80 },
+    { name = "sFlashReadIdQueue", vram = 0x81083FA0 },
+    { name = "sFlashEPiHandle", vram = 0x81083FB8 },
 ]
 
 [[section]]
