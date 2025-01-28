@@ -2,7 +2,13 @@
 #define _DLL_29_INTERNAL_H
 
 #include <PR/ultratypes.h>
-#include "common.h"
+#include "game/actor/actor.h"
+#include "variables.h"
+#include "functions.h"
+#include "dlls/objects/365.h"
+
+extern s32 __dll365_func_0007(TActor *arg0, TActor *arg1, TStruct365Func0006 *arg2, s32 arg3);
+#define func_0007 __dll365_func_0007
 
 extern void __dll365_init(void *arg);
 #define init __dll365_init

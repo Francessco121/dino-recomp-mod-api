@@ -10004,7 +10004,7 @@ functions = [
     { name = "__dll223_cannon_claw_dtor", vram = 0x811B8048, size = 0xC },
     { name = "__dll223_cannon_claw_func_18", vram = 0x811B8054, size = 0x34 },
     { name = "__dll223_cannon_claw_func_4C", vram = 0x811B8088, size = 0x168 },
-    { name = "__dll223_func_1B4", vram = 0x811B81F0, size = 0x4C },
+    { name = "__dll223_cannon_claw_func_1B4", vram = 0x811B81F0, size = 0x4C },
     { name = "__dll223_cannon_claw_func_200", vram = 0x811B823C, size = 0xC },
     { name = "__dll223_cannon_claw_func_20C", vram = 0x811B8248, size = 0x60 },
     { name = "__dll223_cannon_claw_func_26C", vram = 0x811B82A8, size = 0x10 },
@@ -15449,7 +15449,7 @@ functions = [
     { name = "__dll365_func_0004", vram = 0x8127D0EC, size = 0x10 },
     { name = "__dll365_func_0005", vram = 0x8127D0FC, size = 0x10 },
     { name = "__dll365_func_0006", vram = 0x8127D10C, size = 0x14 },
-    { name = "__dll365_func_E4", vram = 0x8127D120, size = 0x1C },
+    { name = "__dll365_func_0007", vram = 0x8127D120, size = 0x1C },
 ]
 
 [[section]]

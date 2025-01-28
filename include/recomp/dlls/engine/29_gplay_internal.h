@@ -2,7 +2,12 @@
 #define _DLL_29_INTERNAL_H
 
 #include <PR/ultratypes.h>
-#include "common.h"
+#include "game/actor/actor.h"
+#include "sys/dll.h"
+#include "sys/math.h"
+#include "variables.h"
+#include "functions.h"
+#include "dll.h"
 
 extern const char __dll29_str1[];
 #define str1 __dll29_str1
@@ -88,6 +93,30 @@ extern u8 __dll29__bss_0x1a4a[0x4];
 extern s32 __dll29_bss_1A50[2];
 #define bss_1A50 __dll29_bss_1A50
 
+extern s32 __dll29_gplay_func_3E4(s8, u8);
+#define gplay_func_3E4 __dll29_gplay_func_3E4
+
+extern void __dll29_gplay_func_6AC();
+#define gplay_func_6AC __dll29_gplay_func_6AC
+
+extern void __dll29_gplay_func_958(Vec3f *param1, s16 param2, s32 param3, s32 param4);
+#define gplay_func_958 __dll29_gplay_func_958
+
+extern void __dll29_gplay_func_AE0();
+#define gplay_func_AE0 __dll29_gplay_func_AE0
+
+extern void __dll29_gplay_func_D94();
+#define gplay_func_D94 __dll29_gplay_func_D94
+
+extern void __dll29_gplay_func_1314();
+#define gplay_func_1314 __dll29_gplay_func_1314
+
+extern void __dll29_gplay_func_139C(s32 param1, s32 param2);
+#define gplay_func_139C __dll29_gplay_func_139C
+
+extern void __dll29_gplay_func_15B8(s32 param1);
+#define gplay_func_15B8 __dll29_gplay_func_15B8
+
 extern void __dll29_gplay_ctor(DLLFile *self);
 #define gplay_ctor __dll29_gplay_ctor
 
@@ -97,14 +126,11 @@ extern void __dll29_gplay_dtor(DLLFile *self);
 extern void __dll29_gplay_func_110(s8 param1);
 #define gplay_func_110 __dll29_gplay_func_110
 
-extern s32 __dll29_gplay_func_3E4(s8 param1, u8 param2);
-#define gplay_func_3E4 __dll29_gplay_func_3E4
+extern void __dll29_gplay_func_198(s8 param1, u8 *param2);
+#define gplay_func_198 __dll29_gplay_func_198
 
 extern void __dll29_gplay_func_638(s8 param1, s8 param2);
 #define gplay_func_638 __dll29_gplay_func_638
-
-extern void __dll29_gplay_func_6AC();
-#define gplay_func_6AC __dll29_gplay_func_6AC
 
 extern u32 __dll29_gplay_func_79C();
 #define gplay_func_79C __dll29_gplay_func_79C
@@ -118,12 +144,6 @@ extern GplayStruct4 *__dll29_gplay_func_930();
 extern void __dll29_gplay_func_94C(s32 param1);
 #define gplay_func_94C __dll29_gplay_func_94C
 
-extern void __dll29_gplay_func_958(Vec3f *param1, s16 param2, s32 param3, s32 param4);
-#define gplay_func_958 __dll29_gplay_func_958
-
-extern void __dll29_gplay_func_AE0();
-#define gplay_func_AE0 __dll29_gplay_func_AE0
-
 extern void __dll29_gplay_func_B3C(Vec3f *param1, s16 param2, s32 param3);
 #define gplay_func_B3C __dll29_gplay_func_B3C
 
@@ -135,9 +155,6 @@ extern void __dll29_gplay_func_D20();
 
 extern s32 __dll29_gplay_func_D70();
 #define gplay_func_D70 __dll29_gplay_func_D70
-
-extern void __dll29_gplay_func_D94();
-#define gplay_func_D94 __dll29_gplay_func_D94
 
 extern GplayStruct7 *__dll29_gplay_func_E74();
 #define gplay_func_E74 __dll29_gplay_func_E74
@@ -190,14 +207,8 @@ extern void *__dll29_gplay_func_1254();
 extern u32 __dll29_gplay_func_1270();
 #define gplay_func_1270 __dll29_gplay_func_1270
 
-extern void __dll29_gplay_func_1314();
-#define gplay_func_1314 __dll29_gplay_func_1314
-
 extern void __dll29_gplay_func_1378(s32 param1, s32 param2);
 #define gplay_func_1378 __dll29_gplay_func_1378
-
-extern void __dll29_gplay_func_139C(s32 param1, s32 param2);
-#define gplay_func_139C __dll29_gplay_func_139C
 
 extern u8 __dll29_gplay_func_143C(s32 param1);
 #define gplay_func_143C __dll29_gplay_func_143C
@@ -207,9 +218,6 @@ extern u8 __dll29_gplay_func_14F0(s32 param1, s32 param2);
 
 extern u16 __dll29_gplay_func_1590(s32 param1);
 #define gplay_func_1590 __dll29_gplay_func_1590
-
-extern void __dll29_gplay_func_15B8(s32 param1);
-#define gplay_func_15B8 __dll29_gplay_func_15B8
 
 extern u32 __dll29_gplay_func_163C(s32 param1);
 #define gplay_func_163C __dll29_gplay_func_163C

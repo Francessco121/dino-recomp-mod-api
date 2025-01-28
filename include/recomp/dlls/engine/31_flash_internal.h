@@ -104,32 +104,11 @@ extern OSMesg __dll31_sFlashReadIdQueueBuffer[1];
 extern u32 __dll31_DAT_81084030;
 #define DAT_81084030 __dll31_DAT_81084030
 
-extern void __dll31_flash_ctor(DLLFile *self);
-#define flash_ctor __dll31_flash_ctor
-
-extern void __dll31_flash_dtor(DLLFile *self);
-#define flash_dtor __dll31_flash_dtor
-
-extern s32 __dll31_flash_load_game(FlashStruct *param1, u8 param2, s32 param3, s32 param4);
-#define flash_load_game __dll31_flash_load_game
-
 extern void __dll31_flash_compute_checksum(FlashStruct *param);
 #define flash_compute_checksum __dll31_flash_compute_checksum
 
-extern OSPiHandle *__dll31_osFlashInit();
-#define osFlashInit __dll31_osFlashInit
-
-extern void __dll31_flash_func_638();
-#define flash_func_638 __dll31_flash_func_638
-
-extern void __dll31_osFlashReadStatus(u8 *flash_status);
-#define osFlashReadStatus __dll31_osFlashReadStatus
-
 extern void __dll31_osFlashReadId(u32 *flash_type, u32 *flash_maker);
 #define osFlashReadId __dll31_osFlashReadId
-
-extern void __dll31_osFlashClearStatus();
-#define osFlashClearStatus __dll31_osFlashClearStatus
 
 extern s32 __dll31_osFlashSectorErase(u32 page_num);
 #define osFlashSectorErase __dll31_osFlashSectorErase
@@ -142,5 +121,29 @@ extern s32 __dll31_osFlashWriteArray(u32 page_num);
 
 extern s32 __dll31_osFlashReadArray(OSIoMesg *mb, s32 priority, u32 page_num, void *dramAddr, u32 n_pages, OSMesgQueue *mq);
 #define osFlashReadArray __dll31_osFlashReadArray
+
+extern void __dll31_flash_ctor(DLLFile *self);
+#define flash_ctor __dll31_flash_ctor
+
+extern void __dll31_flash_dtor(DLLFile *self);
+#define flash_dtor __dll31_flash_dtor
+
+extern s32 __dll31_flash_load_game(FlashStruct *param1, u8 param2, s32 param3, s32 param4);
+#define flash_load_game __dll31_flash_load_game
+
+extern s16 __dll31_flash_save_game(FlashStruct *param1, u8 param2, s32 param3, s32 param4);
+#define flash_save_game __dll31_flash_save_game
+
+extern OSPiHandle *__dll31_osFlashInit();
+#define osFlashInit __dll31_osFlashInit
+
+extern void __dll31_flash_func_638();
+#define flash_func_638 __dll31_flash_func_638
+
+extern void __dll31_osFlashReadStatus(u8 *flash_status);
+#define osFlashReadStatus __dll31_osFlashReadStatus
+
+extern void __dll31_osFlashClearStatus();
+#define osFlashClearStatus __dll31_osFlashClearStatus
 
 #endif //_DLL_29_INTERNAL_H

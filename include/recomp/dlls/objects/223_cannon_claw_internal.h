@@ -2,7 +2,12 @@
 #define _DLL_29_INTERNAL_H
 
 #include <PR/ultratypes.h>
-#include "common.h"
+#include "game/actor/actor.h"
+#include "variables.h"
+#include "functions.h"
+
+extern void __dll223_cannon_claw_func_1B4(TActor *a0);
+#define cannon_claw_func_1B4 __dll223_cannon_claw_func_1B4
 
 extern void __dll223_cannon_claw_ctor(void *arg);
 #define cannon_claw_ctor __dll223_cannon_claw_ctor
