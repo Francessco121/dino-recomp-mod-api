@@ -5,6 +5,7 @@
 #include "game/actor/actor.h"
 #include "sys/dll.h"
 #include "sys/math.h"
+#include "sys/fs.h"
 #include "variables.h"
 #include "functions.h"
 #include "dll.h"
