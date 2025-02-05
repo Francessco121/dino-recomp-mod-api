@@ -8,6 +8,8 @@
 RECOMP_IMPORT("*", int sprintf(char *s, const char *fmt, ...))
 RECOMP_IMPORT("*", int vsprintf(char *s, const char *fmt, va_list args))
 
+RECOMP_IMPORT("*", int recomp_printf(const char *fmt, ...))
+RECOMP_IMPORT("*", int recomp_vprintf(const char *fmt, va_list args))
 RECOMP_IMPORT("*", const char *recomp_vsprintf_helper(const char *fmt, va_list args))
 RECOMP_IMPORT("*", const char *recomp_sprintf_helper(const char *fmt, ...))
 
