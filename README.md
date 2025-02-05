@@ -6,6 +6,9 @@ This repository contains everything necessary to create mods for [Dinosaur Plane
 - Recomp modding headers
 - Recomp-specific headers for Dinosaur Planet DLLs
 
+## Writing Mods
+Please see the [Recomp Modding](https://hackmd.io/fMDiGEJ9TBSjomuZZOgzNg) document for a general explanation of the N64 recomp modding framework.
+
 ## Regenerating Symbols
 When updating to a new version of the decompilation, the symbol TOML files and DLL headers must be regenerated.
 
