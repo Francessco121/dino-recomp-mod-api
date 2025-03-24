@@ -44,9 +44,16 @@ RECOMP_IMPORT("*", s32 recomp_dbgui_checkbox(const char *label, s32 *value))
 RECOMP_IMPORT("*", s32 recomp_dbgui_input_int(const char *label, s32 *value))
 RECOMP_IMPORT("*", s32 recomp_dbgui_input_float(const char *label, f32 *value))
 RECOMP_IMPORT("*", s32 recomp_dbgui_input_text(const char *label, char *buffer, s32 buffer_size))
+RECOMP_IMPORT("*", void recomp_dbgui_set_next_item_width(f32 width))
+RECOMP_IMPORT("*", void recomp_dbgui_push_item_width(f32 width))
+RECOMP_IMPORT("*", void recomp_dbgui_pop_item_width())
+RECOMP_IMPORT("*", s32 recomp_dbgui_begin_tab_bar(const char *str_id))
+RECOMP_IMPORT("*", void recomp_dbgui_end_tab_bar())
+RECOMP_IMPORT("*", s32 recomp_dbgui_begin_tab_item(const char *label, s32 *open))
+RECOMP_IMPORT("*", void recomp_dbgui_end_tab_item())
 RECOMP_IMPORT("*", void recomp_dbgui_push_str_id(const char *str_id))
 RECOMP_IMPORT("*", void recomp_dbgui_pop_id())
-RECOMP_IMPORT("*", s32 recomp_dbgui_is_item_hovered());
+RECOMP_IMPORT("*", s32 recomp_dbgui_is_item_hovered())
 RECOMP_IMPORT("*", void recomp_dbgui_get_display_size(f32 *width, f32 *height))
 typedef struct {
     float r;
