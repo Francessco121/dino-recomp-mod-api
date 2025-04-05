@@ -1,0 +1,9 @@
+[[section]]
+name = ".segment"
+rom = 0x00001000
+vram = 0x80000400
+size = 0xA3AA0
+
+symbols = [
+    
+]

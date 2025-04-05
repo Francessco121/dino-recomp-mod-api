@@ -9,8 +9,8 @@ typedef struct {
     f32 x, y;
 } DbgUiPos;
 
-RECOMP_IMPORT("*", int sprintf(char *s, const char *fmt, ...))
-RECOMP_IMPORT("*", int vsprintf(char *s, const char *fmt, va_list args))
+RECOMP_IMPORT("*", int recomp_sprintf(char *s, const char *fmt, ...))
+RECOMP_IMPORT("*", int recomp_vsprintf(char *s, const char *fmt, va_list args))
 
 RECOMP_IMPORT("*", int recomp_printf(const char *fmt, ...))
 RECOMP_IMPORT("*", int recomp_vprintf(const char *fmt, va_list args))
