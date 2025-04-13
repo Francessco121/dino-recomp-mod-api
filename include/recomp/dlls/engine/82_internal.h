@@ -1,5 +1,5 @@
-#ifndef _DLL_29_INTERNAL_H
-#define _DLL_29_INTERNAL_H
+#ifndef _DLL_82_INTERNAL_H
+#define _DLL_82_INTERNAL_H
 
 #include <PR/ultratypes.h>
 
@@ -12,4 +12,4 @@ extern void __dll82_dtor(void *arg);
 extern void __dll82_func_18(void *a0, void *a1, void *a2, void *a3);
 #define func_18 __dll82_func_18
 
-#endif //_DLL_29_INTERNAL_H
+#endif //_DLL_82_INTERNAL_H

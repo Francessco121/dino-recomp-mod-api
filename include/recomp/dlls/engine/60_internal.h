@@ -1,5 +1,5 @@
-#ifndef _DLL_29_INTERNAL_H
-#define _DLL_29_INTERNAL_H
+#ifndef _DLL_60_INTERNAL_H
+#define _DLL_60_INTERNAL_H
 
 #include "PR/ultratypes.h"
 #include "PR/os.h"
@@ -77,4 +77,4 @@ extern void __dll60_dll_60_draw(Gfx **gdl, UNK_PTR **mtxs, UNK_PTR **vtxs);
 extern void __dll60_dll_60_func_D0C();
 #define dll_60_func_D0C __dll60_dll_60_func_D0C
 
-#endif //_DLL_29_INTERNAL_H
+#endif //_DLL_60_INTERNAL_H

@@ -1,5 +1,5 @@
-#ifndef _DLL_29_INTERNAL_H
-#define _DLL_29_INTERNAL_H
+#ifndef _DLL_223_INTERNAL_H
+#define _DLL_223_INTERNAL_H
 
 #include <PR/ultratypes.h>
 #include "dlls/objects/223_cannon_claw.h"
@@ -38,4 +38,4 @@ extern s32 __dll223_cannon_claw_func_27C(void *a0);
 extern s32 __dll223_cannon_claw_func_28C(void *a0, void *a1);
 #define cannon_claw_func_28C __dll223_cannon_claw_func_28C
 
-#endif //_DLL_29_INTERNAL_H
+#endif //_DLL_223_INTERNAL_H

@@ -1,5 +1,5 @@
-#ifndef _DLL_29_INTERNAL_H
-#define _DLL_29_INTERNAL_H
+#ifndef _DLL_30_INTERNAL_H
+#define _DLL_30_INTERNAL_H
 
 #include <PR/ultratypes.h>
 #include "dll.h"
@@ -40,4 +40,4 @@ extern char *__dll30_task_get_completion_task_text();
 extern s16 __dll30_task_get_completion_percentage();
 #define task_get_completion_percentage __dll30_task_get_completion_percentage
 
-#endif //_DLL_29_INTERNAL_H
+#endif //_DLL_30_INTERNAL_H

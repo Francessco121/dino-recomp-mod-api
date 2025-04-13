@@ -2009,6 +2009,18 @@ vram = 0x810C102C
 size = 0x740
 
 symbols = [
+    { name = "__dll61_data_0", vram = 0x810C1728 },
+    { name = "__dll61_data_4", vram = 0x810C172C },
+    { name = "__dll61_data_8", vram = 0x810C1730 },
+    { name = "__dll61_bss_0", vram = 0x810C1738 },
+    { name = "__dll61_bss_1", vram = 0x810C1739 },
+    { name = "__dll61_bss_2", vram = 0x810C173A },
+    { name = "__dll61_bss_4", vram = 0x810C173C },
+    { name = "__dll61_bss_8", vram = 0x810C1740 },
+    { name = "__dll61_bss_C", vram = 0x810C1744 },
+    { name = "__dll61_bss_10", vram = 0x810C1748 },
+    { name = "__dll61_bss_14", vram = 0x810C174C },
+    { name = "__dll61_bss_18", vram = 0x810C1750 },
 ]
 
 [[section]]

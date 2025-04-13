@@ -1,5 +1,5 @@
-#ifndef _DLL_29_INTERNAL_H
-#define _DLL_29_INTERNAL_H
+#ifndef _DLL_28_INTERNAL_H
+#define _DLL_28_INTERNAL_H
 
 #include <PR/ultratypes.h>
 #include "dlls/engine/28_screen_fade.h"
@@ -56,4 +56,4 @@ extern f32 __dll28_screen_fade_get_progress();
 extern s32 __dll28_screen_fade_is_complete();
 #define screen_fade_is_complete __dll28_screen_fade_is_complete
 
-#endif //_DLL_29_INTERNAL_H
+#endif //_DLL_28_INTERNAL_H

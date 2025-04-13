@@ -1,5 +1,5 @@
-#ifndef _DLL_29_INTERNAL_H
-#define _DLL_29_INTERNAL_H
+#ifndef _DLL_21_INTERNAL_H
+#define _DLL_21_INTERNAL_H
 
 #include <PR/ultratypes.h>
 #include "sys/fs.h"
@@ -60,4 +60,4 @@ extern GameTextChunk *__dll21_gametext_get_chunk(u16 chunk);
 extern char *__dll21_gametext_get_text(u16 chunk, u16 strIndex);
 #define gametext_get_text __dll21_gametext_get_text
 
-#endif //_DLL_29_INTERNAL_H
+#endif //_DLL_21_INTERNAL_H

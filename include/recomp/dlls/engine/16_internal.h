@@ -1,5 +1,5 @@
-#ifndef _DLL_29_INTERNAL_H
-#define _DLL_29_INTERNAL_H
+#ifndef _DLL_16_INTERNAL_H
+#define _DLL_16_INTERNAL_H
 
 #include <PR/ultratypes.h>
 
@@ -18,4 +18,4 @@ extern void __dll16_func_0001(void *arg);
 extern void __dll16_func_0002(u8 value);
 #define func_0002 __dll16_func_0002
 
-#endif //_DLL_29_INTERNAL_H
+#endif //_DLL_16_INTERNAL_H

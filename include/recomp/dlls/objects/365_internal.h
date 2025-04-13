@@ -1,5 +1,5 @@
-#ifndef _DLL_29_INTERNAL_H
-#define _DLL_29_INTERNAL_H
+#ifndef _DLL_365_INTERNAL_H
+#define _DLL_365_INTERNAL_H
 
 #include <PR/ultratypes.h>
 #include "game/objects/object.h"
@@ -37,4 +37,4 @@ extern s32 __dll365_func_0005(void *arg);
 extern s32 __dll365_func_0006(void *arg0, s32 arg1);
 #define func_0006 __dll365_func_0006
 
-#endif //_DLL_29_INTERNAL_H
+#endif //_DLL_365_INTERNAL_H

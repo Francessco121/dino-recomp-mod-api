@@ -1,5 +1,5 @@
-#ifndef _DLL_29_INTERNAL_H
-#define _DLL_29_INTERNAL_H
+#ifndef _DLL_31_INTERNAL_H
+#define _DLL_31_INTERNAL_H
 
 #include <PR/ultratypes.h>
 #include <PR/os.h>
@@ -146,4 +146,4 @@ extern void __dll31_osFlashReadStatus(u8 *flash_status);
 extern void __dll31_osFlashClearStatus();
 #define osFlashClearStatus __dll31_osFlashClearStatus
 
-#endif //_DLL_29_INTERNAL_H
+#endif //_DLL_31_INTERNAL_H
