@@ -9,6 +9,33 @@
 #include "functions.h"
 #include "prevent_bss_reordering.h"
 
+extern s8 __dll21_sCurrentBankIndex;
+#define sCurrentBankIndex __dll21_sCurrentBankIndex
+
+extern u16 __dll21_sBankCount;
+#define sBankCount __dll21_sBankCount
+
+extern u16 __dll21_sBankEntryCount;
+#define sBankEntryCount __dll21_sBankEntryCount
+
+extern u16 __dll21_sBankSize;
+#define sBankSize __dll21_sBankSize
+
+extern u8 *__dll21_sCurrentBank;
+#define sCurrentBank __dll21_sCurrentBank
+
+extern s32 __dll21_sCurrentBank_GlobalOffset;
+#define sCurrentBank_GlobalOffset __dll21_sCurrentBank_GlobalOffset
+
+extern u8 *__dll21_sCurrentBank_StrCounts;
+#define sCurrentBank_StrCounts __dll21_sCurrentBank_StrCounts
+
+extern u16 *__dll21_sCurrentBank_Sizes;
+#define sCurrentBank_Sizes __dll21_sCurrentBank_Sizes
+
+extern u16 *__dll21_sCurrentBank_Offsets;
+#define sCurrentBank_Offsets __dll21_sCurrentBank_Offsets
+
 extern void __dll21_gametext_set_bank(s8 bank);
 #define gametext_set_bank __dll21_gametext_set_bank
 

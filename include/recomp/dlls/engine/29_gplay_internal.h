@@ -2,10 +2,12 @@
 #define _DLL_29_INTERNAL_H
 
 #include <PR/ultratypes.h>
+#include "dlls/engine/28_screen_fade.h"
 #include "game/objects/object.h"
 #include "sys/dll.h"
 #include "sys/math.h"
 #include "sys/fs.h"
+#include "sys/menu.h"
 #include "variables.h"
 #include "functions.h"
 #include "dll.h"

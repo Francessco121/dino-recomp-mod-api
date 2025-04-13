@@ -5,5 +5,6 @@ vram = 0x80000400
 size = 0xA3AA0
 
 symbols = [
-    
+    { name = "osTvType", vram = 0x80000300 },
+    { name = "osMemSize", vram = 0x80000318 },
 ]

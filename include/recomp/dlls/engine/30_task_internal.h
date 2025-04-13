@@ -7,6 +7,15 @@
 #include "functions.h"
 #include "prevent_bss_reordering.h"
 
+extern u8 __dll30_sRecentlyCompleted[5];
+#define sRecentlyCompleted __dll30_sRecentlyCompleted
+
+extern u8 __dll30_sCompletionIdx;
+#define sCompletionIdx __dll30_sCompletionIdx
+
+extern s8 __dll30_sRecentlyCompletedNextIdx;
+#define sRecentlyCompletedNextIdx __dll30_sRecentlyCompletedNextIdx
+
 extern void __dll30_task_ctor(void *self);
 #define task_ctor __dll30_task_ctor
 
