@@ -11,6 +11,7 @@
 #include "variables.h"
 #include "functions.h"
 #include "dll.h"
+#include "prevent_bss_reordering.h"
 
 extern const char __dll29_str1[];
 #define str1 __dll29_str1

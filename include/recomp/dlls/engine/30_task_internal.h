@@ -5,7 +5,6 @@
 #include "dll.h"
 #include "variables.h"
 #include "functions.h"
-#include "prevent_bss_reordering.h"
 
 extern u8 __dll30_sRecentlyCompleted[5];
 #define sRecentlyCompleted __dll30_sRecentlyCompleted
