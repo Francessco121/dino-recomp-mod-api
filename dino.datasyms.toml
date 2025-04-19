@@ -82,7 +82,7 @@ symbols = [
     { name = "gDLL_16", vram = 0x8008C9C0 },
     { name = "gDLL_17", vram = 0x8008C9C4 },
     { name = "gDLL_18", vram = 0x8008C9C8 },
-    { name = "gDLL_SCREENS", vram = 0x8008C9CC },
+    { name = "gDLL_20_screens", vram = 0x8008C9CC },
     { name = "gDLL_21_gametext", vram = 0x8008C9D0 },
     { name = "gDLL_subtitles", vram = 0x8008C9D4 },
     { name = "gDLL_23", vram = 0x8008C9D8 },
@@ -1545,6 +1545,10 @@ vram = 0x8106302C
 size = 0x5D0
 
 symbols = [
+    { name = "__dll20_sLoadedScreenNo", vram = 0x810635C4 },
+    { name = "__dll20_sRenderScreen", vram = 0x810635C8 },
+    { name = "__dll20_sLoadedScreenByteLength", vram = 0x810635CC },
+    { name = "__dll20_sLoadedScreen", vram = 0x810635D0 },
 ]
 
 [[section]]

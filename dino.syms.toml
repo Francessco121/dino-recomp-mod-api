@@ -1157,7 +1157,7 @@ functions = [
     { name = "func_8005BC38", vram = 0x8005BC38, size = 0x20 },
     { name = "func_8005BC58", vram = 0x8005BC58, size = 0x88 },
     { name = "func_8005BCE0", vram = 0x8005BCE0, size = 0xA60 },
-    { name = "func_8005C740", vram = 0x8005C740, size = 0x40 },
+    { name = "func_8005C740", vram = 0x8005C740, size = 0x34 },
     { name = "func_8005C780", vram = 0x8005C780, size = 0x218 },
     { name = "func_8005C998", vram = 0x8005C998, size = 0xC4 },
     { name = "func_8005CA5C", vram = 0x8005CA5C, size = 0x2C },
@@ -3333,11 +3333,11 @@ relocs = [
 ]
 
 functions = [
-    { name = "__dll20_func_0", vram = 0x8106302C, size = 0x3C },
-    { name = "__dll20_func_3C", vram = 0x81063068, size = 0xC },
-    { name = "__dll20_func_48", vram = 0x81063074, size = 0x168 },
-    { name = "__dll20_func_1B0", vram = 0x810631DC, size = 0x6C },
-    { name = "__dll20_func_21C", vram = 0x81063248, size = 0x308 },
+    { name = "__dll20_screens_ctor", vram = 0x8106302C, size = 0x3C },
+    { name = "__dll20_screens_dtor", vram = 0x81063068, size = 0xC },
+    { name = "__dll20_screens_show_screen", vram = 0x81063074, size = 0x168 },
+    { name = "__dll20_screens_hide_screen", vram = 0x810631DC, size = 0x6C },
+    { name = "__dll20_screens_draw", vram = 0x81063248, size = 0x308 },
 ]
 
 [[section]]
