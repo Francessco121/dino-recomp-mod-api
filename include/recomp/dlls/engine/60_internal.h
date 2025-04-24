@@ -4,6 +4,7 @@
 #include "PR/ultratypes.h"
 #include "PR/os.h"
 #include "game/objects/object.h"
+#include "sys/fonts.h"
 #include "sys/gfx/gx.h"
 #include "sys/gfx/texture.h"
 #include "sys/memory.h"
