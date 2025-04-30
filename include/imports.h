@@ -5,6 +5,14 @@
 #include "modding.h"
 #include "stdarg.h"
 
+// N64ModernRuntime
+
+RECOMP_IMPORT("*", void *recomp_alloc(unsigned long size))
+RECOMP_IMPORT("*", void recomp_free(void *ptr))
+
+
+// Dino Recomp
+
 typedef struct {
     f32 x, y;
 } DbgUiPos;
