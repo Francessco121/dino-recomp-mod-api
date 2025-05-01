@@ -9,6 +9,7 @@
 #include "sys/memory.h"
 #include "functions.h"
 #include "macros.h"
+#include "prevent_bss_reordering.h"
 
 extern s32 __dll20_sLoadedScreenNo;
 #define sLoadedScreenNo __dll20_sLoadedScreenNo

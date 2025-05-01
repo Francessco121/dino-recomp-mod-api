@@ -1,10 +1,12 @@
 #ifndef _DLL_28_INTERNAL_H
 #define _DLL_28_INTERNAL_H
 
-#include <PR/ultratypes.h>
+#include "PR/ultratypes.h"
+#include "PR/gbi.h"
 #include "dlls/engine/28_screen_fade.h"
 #include "sys/camera.h"
 #include "sys/gfx/map.h"
+#include "sys/main.h"
 #include "sys/objects.h"
 #include "dll.h"
 #include "functions.h"
@@ -30,13 +32,13 @@ extern u8 __dll28_sDelayTimer;
 extern void __dll28_screen_fade_fade_reversed(s32, s32);
 #define screen_fade_fade_reversed __dll28_screen_fade_fade_reversed
 
-extern void __dll28_screen_fade_draw_simple_black(Gfx **gdl, s32 *mtxs, s32 *vtxs);
+extern void __dll28_screen_fade_draw_simple_black(Gfx **gdl, Mtx **mtxs, Vertex **vtxs);
 #define screen_fade_draw_simple_black __dll28_screen_fade_draw_simple_black
 
-extern void __dll28_screen_fade_draw_simple(Gfx **gdl, s32 *mtxs, s32 *vtxs, s32 red, s32 green, s32 blue);
+extern void __dll28_screen_fade_draw_simple(Gfx **gdl, Mtx **mtxs, Vertex **vtxs, s32 red, s32 green, s32 blue);
 #define screen_fade_draw_simple __dll28_screen_fade_draw_simple
 
-extern void __dll28_screen_fade_draw_radial(Gfx **gdl, s32 *mtxs, s32 *vtxs, s32 red, s32 green, s32 blue);
+extern void __dll28_screen_fade_draw_radial(Gfx **gdl, Mtx **mtxs, Vertex **vtxs, s32 red, s32 green, s32 blue);
 #define screen_fade_draw_radial __dll28_screen_fade_draw_radial
 
 extern void __dll28_screen_fade_ctor(void *self);

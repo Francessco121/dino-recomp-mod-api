@@ -1,8 +1,8 @@
 #ifndef _DLL_31_INTERNAL_H
 #define _DLL_31_INTERNAL_H
 
-#include <PR/ultratypes.h>
-#include <PR/os.h>
+#include "PR/ultratypes.h"
+#include "PR/os.h"
 #include "dlls/engine/31_flash.h"
 #include "sys/dll.h"
 #include "sys/memory.h"
@@ -107,6 +107,9 @@ extern u32 __dll31_DAT_81084030;
 extern void __dll31_flash_compute_checksum(FlashStruct *param);
 #define flash_compute_checksum __dll31_flash_compute_checksum
 
+extern OSPiHandle *__dll31_osFlashInit();
+#define osFlashInit __dll31_osFlashInit
+
 extern void __dll31_osFlashReadId(u32 *flash_type, u32 *flash_maker);
 #define osFlashReadId __dll31_osFlashReadId
 
@@ -133,9 +136,6 @@ extern s32 __dll31_flash_load_game(FlashStruct *param1, u8 param2, s32 param3, s
 
 extern s16 __dll31_flash_save_game(FlashStruct *param1, u8 param2, s32 param3, s32 param4);
 #define flash_save_game __dll31_flash_save_game
-
-extern OSPiHandle *__dll31_osFlashInit();
-#define osFlashInit __dll31_osFlashInit
 
 extern void __dll31_flash_func_638();
 #define flash_func_638 __dll31_flash_func_638

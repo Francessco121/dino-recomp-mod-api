@@ -1,13 +1,16 @@
 #ifndef _DLL_61_INTERNAL_H
 #define _DLL_61_INTERNAL_H
 
+#include "PR/gbi.h"
 #include "PR/ultratypes.h"
 #include "dlls/engine/28_screen_fade.h"
 #include "game/objects/object.h"
 #include "sys/gfx/texture.h"
+#include "sys/main.h"
 #include "sys/menu.h"
 #include "functions.h"
 #include "dll.h"
+#include "types.h"
 
 extern s32 __dll61_data_0;
 #define data_0 __dll61_data_0
@@ -57,7 +60,7 @@ extern s32 __dll61_dll_61_update1();
 extern void __dll61_dll_61_update2();
 #define dll_61_update2 __dll61_dll_61_update2
 
-extern void __dll61_dll_61_draw(Gfx **gdl, UNK_PTR **mtxs, UNK_PTR **vtxs);
+extern void __dll61_dll_61_draw(Gfx **gdl, Mtx **mtxs, Vertex **vtxs);
 #define dll_61_draw __dll61_dll_61_draw
 
 #endif //_DLL_61_INTERNAL_H

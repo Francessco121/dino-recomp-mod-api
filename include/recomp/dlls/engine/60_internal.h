@@ -1,16 +1,19 @@
 #ifndef _DLL_60_INTERNAL_H
 #define _DLL_60_INTERNAL_H
 
+#include "PR/gbi.h"
 #include "PR/ultratypes.h"
 #include "PR/os.h"
 #include "game/objects/object.h"
 #include "sys/fonts.h"
 #include "sys/gfx/gx.h"
 #include "sys/gfx/texture.h"
+#include "sys/main.h"
 #include "sys/memory.h"
 #include "sys/menu.h"
 #include "dll.h"
 #include "functions.h"
+#include "types.h"
 
 extern u8 __dll60_data_0;
 #define data_0 __dll60_data_0
@@ -72,7 +75,7 @@ extern s32 __dll60_dll_60_update1();
 extern void __dll60_dll_60_update2();
 #define dll_60_update2 __dll60_dll_60_update2
 
-extern void __dll60_dll_60_draw(Gfx **gdl, UNK_PTR **mtxs, UNK_PTR **vtxs);
+extern void __dll60_dll_60_draw(Gfx **gdl, Mtx **mtxs, Vertex **vtxs);
 #define dll_60_draw __dll60_dll_60_draw
 
 extern void __dll60_dll_60_func_D0C();

@@ -1,7 +1,7 @@
 #ifndef _DLL_365_INTERNAL_H
 #define _DLL_365_INTERNAL_H
 
-#include <PR/ultratypes.h>
+#include "PR/ultratypes.h"
 #include "game/objects/object.h"
 #include "variables.h"
 #include "functions.h"
@@ -13,7 +13,7 @@ extern s32 __dll365_func_0007(Object *arg0, Object *arg1, TStruct365Func0006 *ar
 extern void __dll365_init(void *arg);
 #define init __dll365_init
 
-extern int __dll365_fini(void *arg);
+extern void __dll365_fini(void *arg);
 #define fini __dll365_fini
 
 extern void __dll365_func_0000(Object *obj, s32 arg1, s32 arg2);

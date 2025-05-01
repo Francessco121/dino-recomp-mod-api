@@ -1,7 +1,8 @@
 #ifndef _DLL_21_INTERNAL_H
 #define _DLL_21_INTERNAL_H
 
-#include <PR/ultratypes.h>
+#include "PR/ultratypes.h"
+#include "libc/string.h"
 #include "sys/fs.h"
 #include "sys/memory.h"
 #include "dlls/engine/21_gametext.h"

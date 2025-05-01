@@ -1,12 +1,12 @@
 #ifndef _DLL_16_INTERNAL_H
 #define _DLL_16_INTERNAL_H
 
-#include <PR/ultratypes.h>
+#include "PR/ultratypes.h"
 
 extern void __dll16_init(void *arg);
 #define init __dll16_init
 
-extern int __dll16_fini(void *arg);
+extern void __dll16_fini(void *arg);
 #define fini __dll16_fini
 
 extern void __dll16_func_0000(void);

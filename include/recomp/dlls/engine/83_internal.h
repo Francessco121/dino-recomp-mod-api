@@ -1,7 +1,8 @@
 #ifndef _DLL_83_INTERNAL_H
 #define _DLL_83_INTERNAL_H
 
-#include <PR/ultratypes.h>
+#include "PR/ultratypes.h"
+#include "sys/main.h"
 
 extern void __dll83_ctor(void *arg);
 #define ctor __dll83_ctor

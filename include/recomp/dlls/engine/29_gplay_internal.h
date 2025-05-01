@@ -1,13 +1,15 @@
 #ifndef _DLL_29_INTERNAL_H
 #define _DLL_29_INTERNAL_H
 
-#include <PR/ultratypes.h>
+#include "PR/ultratypes.h"
 #include "dlls/engine/28_screen_fade.h"
 #include "game/objects/object.h"
 #include "sys/dll.h"
+#include "sys/main.h"
 #include "sys/math.h"
 #include "sys/fs.h"
 #include "sys/menu.h"
+#include "sys/memory.h"
 #include "variables.h"
 #include "functions.h"
 #include "dll.h"
@@ -97,8 +99,8 @@ extern u8 __dll29__bss_0x1a4a[0x4];
 extern s32 __dll29_bss_1A50[2];
 #define bss_1A50 __dll29_bss_1A50
 
-extern s32 __dll29_gplay_func_3E4(s8, u8);
-#define gplay_func_3E4 __dll29_gplay_func_3E4
+extern s32 __dll29_gplay_load_save(s8 idx, u8 startGame);
+#define gplay_load_save __dll29_gplay_load_save
 
 extern void __dll29_gplay_func_6AC();
 #define gplay_func_6AC __dll29_gplay_func_6AC
@@ -106,8 +108,8 @@ extern void __dll29_gplay_func_6AC();
 extern void __dll29_gplay_func_958(Vec3f *param1, s16 param2, s32 param3, s32 param4);
 #define gplay_func_958 __dll29_gplay_func_958
 
-extern void __dll29_gplay_func_AE0();
-#define gplay_func_AE0 __dll29_gplay_func_AE0
+extern void __dll29_gplay_start_game();
+#define gplay_start_game __dll29_gplay_start_game
 
 extern void __dll29_gplay_func_D94();
 #define gplay_func_D94 __dll29_gplay_func_D94
@@ -127,14 +129,14 @@ extern void __dll29_gplay_ctor(DLLFile *self);
 extern void __dll29_gplay_dtor(DLLFile *self);
 #define gplay_dtor __dll29_gplay_dtor
 
-extern void __dll29_gplay_func_110(s8 param1);
-#define gplay_func_110 __dll29_gplay_func_110
+extern void __dll29_gplay_erase_save(s8 idx);
+#define gplay_erase_save __dll29_gplay_erase_save
 
-extern void __dll29_gplay_func_198(s8 param1, u8 *param2);
-#define gplay_func_198 __dll29_gplay_func_198
+extern void __dll29_gplay_init_save(s8 idx, char *filename);
+#define gplay_init_save __dll29_gplay_init_save
 
-extern void __dll29_gplay_func_638(s8 param1, s8 param2);
-#define gplay_func_638 __dll29_gplay_func_638
+extern void __dll29_gplay_copy_save(s8 srcIdx, s8 dstIdx);
+#define gplay_copy_save __dll29_gplay_copy_save
 
 extern u32 __dll29_gplay_func_79C();
 #define gplay_func_79C __dll29_gplay_func_79C

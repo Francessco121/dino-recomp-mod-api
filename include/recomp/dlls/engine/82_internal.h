@@ -1,7 +1,7 @@
 #ifndef _DLL_82_INTERNAL_H
 #define _DLL_82_INTERNAL_H
 
-#include <PR/ultratypes.h>
+#include "PR/ultratypes.h"
 
 extern void __dll82_ctor(void *arg);
 #define ctor __dll82_ctor

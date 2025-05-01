@@ -1,8 +1,9 @@
 #ifndef _DLL_30_INTERNAL_H
 #define _DLL_30_INTERNAL_H
 
-#include <PR/ultratypes.h>
+#include "PR/ultratypes.h"
 #include "dll.h"
+#include "sys/main.h"
 #include "variables.h"
 #include "functions.h"
 
