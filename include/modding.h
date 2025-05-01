@@ -3,6 +3,8 @@
 
 // Do not edit these defines. They use special section names that the recomp mod tool recognizes for specific modding functionality.
 
+#define __RECOMP_STR(sym) #sym
+
 #define RECOMP_IMPORT(mod, func) \
     _Pragma("GCC diagnostic push") \
     _Pragma("GCC diagnostic ignored \"-Wunused-parameter\"") \
@@ -25,8 +27,10 @@
 #define RECOMP_CALLBACK(mod, event) __attribute__((section(".recomp_callback." mod ":" #event)))
 
 #define RECOMP_HOOK(func) __attribute__((section(".recomp_hook." func)))
+#define RECOMP_HOOK_DLL(func) __attribute__((section(".recomp_hook." __RECOMP_STR(func))))
 
 #define RECOMP_HOOK_RETURN(func) __attribute__((section(".recomp_hook_return." func)))
+#define RECOMP_HOOK_RETURN_DLL(func) __attribute__((section(".recomp_hook_return." __RECOMP_STR(func))))
 
 
 #endif
