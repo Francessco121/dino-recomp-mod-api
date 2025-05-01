@@ -13,9 +13,13 @@ RECOMP_IMPORT("*", void recomp_free(void *ptr))
 
 // Dino Recomp
 
-typedef struct {
-    f32 x, y;
-} DbgUiPos;
+RECOMP_IMPORT("*", void recomp_get_window_resolution(u32 *width, u32 *height))
+
+RECOMP_IMPORT("*", void recomp_error_message_box(const char *message))
+RECOMP_IMPORT("*", void recomp_exit_with_error(const char *message))
+RECOMP_IMPORT("*", void recomp_exit())
+RECOMP_IMPORT("*", f32 recomp_powf(f32 x, f32 y))
+RECOMP_IMPORT("*", u32 recomp_time_us())
 
 RECOMP_IMPORT("*", int recomp_sprintf(char *s, const char *fmt, ...))
 RECOMP_IMPORT("*", int recomp_vsprintf(char *s, const char *fmt, va_list args))
@@ -26,6 +30,13 @@ RECOMP_IMPORT("*", int recomp_eprintf(const char *fmt, ...))
 RECOMP_IMPORT("*", int recomp_veprintf(const char *fmt, va_list args))
 RECOMP_IMPORT("*", const char *recomp_vsprintf_helper(const char *fmt, va_list args))
 RECOMP_IMPORT("*", const char *recomp_sprintf_helper(const char *fmt, ...))
+
+
+// Dino Recomp (Debug UI)
+
+typedef struct {
+    f32 x, y;
+} DbgUiPos;
 
 RECOMP_IMPORT("*", s32 recomp_dbgui_begin(const char *str, s32 *open))
 RECOMP_IMPORT("*", void recomp_dbgui_end())
