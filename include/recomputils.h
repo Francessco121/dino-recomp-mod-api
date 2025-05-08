@@ -13,7 +13,22 @@ RECOMP_IMPORT("*", void recomp_free(void *ptr))
 
 // Dino Recomp
 
+typedef enum {
+    RECOMP_ASPECT_ORIGINAL,
+    RECOMP_ASPECT_EXPAND,
+    RECOMP_ASPECT_MANUAL
+} RecompAspectRatio;
+
+typedef enum {
+    RECOMP_HUD_ORIGINAL,
+    RECOMP_HUD_CLAMP16X9,
+    RECOMP_HUD_FULL
+} RecompHUDRatio;
+
 RECOMP_IMPORT("*", void recomp_get_window_resolution(u32 *width, u32 *height))
+RECOMP_IMPORT("*", RecompAspectRatio recomp_get_aspect_ratio())
+RECOMP_IMPORT("*", RecompHUDRatio recomp_get_hud_ratio())
+RECOMP_IMPORT("*", int recomp_get_refresh_rate())
 
 RECOMP_IMPORT("*", void recomp_error_message_box(const char *message))
 RECOMP_IMPORT("*", void recomp_exit_with_error(const char *message))
