@@ -26,8 +26,9 @@ typedef enum {
 } RecompHUDRatio;
 
 RECOMP_IMPORT("*", void recomp_get_window_resolution(u32 *width, u32 *height))
-RECOMP_IMPORT("*", RecompAspectRatio recomp_get_aspect_ratio())
-RECOMP_IMPORT("*", RecompHUDRatio recomp_get_hud_ratio())
+RECOMP_IMPORT("*", RecompAspectRatio recomp_get_aspect_ratio_mode())
+RECOMP_IMPORT("*", f32 recomp_get_aspect_ratio())
+RECOMP_IMPORT("*", RecompHUDRatio recomp_get_hud_ratio_mode())
 RECOMP_IMPORT("*", int recomp_get_refresh_rate())
 
 RECOMP_IMPORT("*", void recomp_error_message_box(const char *message))
