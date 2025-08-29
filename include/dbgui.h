@@ -1,11 +1,10 @@
 #ifndef __DBGUI_H__
 #define __DBGUI_H__
 
-#include <PR/ultratypes.h>
 #include "modding.h"
 
 typedef struct {
-    f32 x, y;
+    float x, y;
 } DbgUiPos;
 
 // Keep in sync with ImGuiInputTextFlags
@@ -35,95 +34,95 @@ typedef enum {
     DBGUI_INPUT_TEXT_FLAGS_EscapeClearsAll     = 1 << 20,  // Escape key clears content if not empty, and deactivate otherwise (contrast to default behavior of Escape to revert)
 } DbgUiInputTextFlags;
 
-RECOMP_IMPORT("*", s32 dbgui_begin(const char *str, s32 *open))
+RECOMP_IMPORT("*", long dbgui_begin(const char *str, long *open))
 RECOMP_IMPORT("*", void dbgui_end())
 RECOMP_IMPORT("*", void dbgui_text(const char *text))
 RECOMP_IMPORT("*", void dbgui_label_text(const char *label, const char *text))
 RECOMP_IMPORT("*", void dbgui_same_line());
 RECOMP_IMPORT("*", void dbgui_new_line());
 RECOMP_IMPORT("*", void dbgui_separator());
-RECOMP_IMPORT("*", s32 dbgui_begin_combo(const char *label, const char *preview))
+RECOMP_IMPORT("*", long dbgui_begin_combo(const char *label, const char *preview))
 RECOMP_IMPORT("*", void dbgui_end_combo())
-RECOMP_IMPORT("*", s32 dbgui_selectable(const char *label, s32 selected))
-RECOMP_IMPORT("*", s32 dbgui_button(const char *label))
-RECOMP_IMPORT("*", s32 dbgui_is_open())
-RECOMP_IMPORT("*", s32 dbgui_is_enabled())
-RECOMP_IMPORT("*", s32 dbgui_begin_main_menu_bar())
+RECOMP_IMPORT("*", long dbgui_selectable(const char *label, long selected))
+RECOMP_IMPORT("*", long dbgui_button(const char *label))
+RECOMP_IMPORT("*", long dbgui_is_open())
+RECOMP_IMPORT("*", long dbgui_is_enabled())
+RECOMP_IMPORT("*", long dbgui_begin_main_menu_bar())
 RECOMP_IMPORT("*", void dbgui_end_main_menu_bar())
-RECOMP_IMPORT("*", s32 dbgui_begin_menu(const char *label))
+RECOMP_IMPORT("*", long dbgui_begin_menu(const char *label))
 RECOMP_IMPORT("*", void dbgui_end_menu())
-RECOMP_IMPORT("*", s32 dbgui_menu_item(const char *label, s32 *selected))
-RECOMP_IMPORT("*", s32 dbgui_collapsing_header(const char *label))
-RECOMP_IMPORT("*", s32 dbgui_tree_node(const char *label))
+RECOMP_IMPORT("*", long dbgui_menu_item(const char *label, long *selected))
+RECOMP_IMPORT("*", long dbgui_collapsing_header(const char *label))
+RECOMP_IMPORT("*", long dbgui_tree_node(const char *label))
 RECOMP_IMPORT("*", void dbgui_tree_pop())
-RECOMP_IMPORT("*", s32 dbgui_begin_child(const char *str_id))
+RECOMP_IMPORT("*", long dbgui_begin_child(const char *str_id))
 RECOMP_IMPORT("*", void dbgui_end_child())
-RECOMP_IMPORT("*", s32 dbgui_checkbox(const char *label, s32 *value))
+RECOMP_IMPORT("*", long dbgui_checkbox(const char *label, long *value))
 typedef struct {
-    s32 step;
-    s32 stepFast;
+    long step;
+    long stepFast;
     DbgUiInputTextFlags flags;
 } DbgUiInputIntOptions;
-RECOMP_IMPORT("*", s32 dbgui_input_int(const char *label, s32 *value))
-RECOMP_IMPORT("*", s32 dbgui_input_int_ext(const char *label, s32 *value, const DbgUiInputIntOptions *options))
+RECOMP_IMPORT("*", long dbgui_input_int(const char *label, long *value))
+RECOMP_IMPORT("*", long dbgui_input_int_ext(const char *label, long *value, const DbgUiInputIntOptions *options))
 typedef struct {
-    f32 step;
-    f32 stepFast;
+    float step;
+    float stepFast;
     const char *format;
     DbgUiInputTextFlags flags;
 } DbgUiInputFloatOptions;
-RECOMP_IMPORT("*", s32 dbgui_input_float(const char *label, f32 *value))
-RECOMP_IMPORT("*", s32 dbgui_input_float_ext(const char *label, f32 *value, const DbgUiInputFloatOptions *options))
-RECOMP_IMPORT("*", s32 dbgui_input_text(const char *label, char *buffer, u32 buffer_size))
-RECOMP_IMPORT("*", s32 dbgui_input_text_ext(const char *label, char *buffer, u32 buffer_size, DbgUiInputTextFlags flags))
-RECOMP_IMPORT("*", void dbgui_set_next_item_width(f32 width))
-RECOMP_IMPORT("*", void dbgui_push_item_width(f32 width))
+RECOMP_IMPORT("*", long dbgui_input_float(const char *label, float *value))
+RECOMP_IMPORT("*", long dbgui_input_float_ext(const char *label, float *value, const DbgUiInputFloatOptions *options))
+RECOMP_IMPORT("*", long dbgui_input_text(const char *label, char *buffer, unsigned long buffer_size))
+RECOMP_IMPORT("*", long dbgui_input_text_ext(const char *label, char *buffer, unsigned long buffer_size, DbgUiInputTextFlags flags))
+RECOMP_IMPORT("*", void dbgui_set_next_item_width(float width))
+RECOMP_IMPORT("*", void dbgui_push_item_width(float width))
 RECOMP_IMPORT("*", void dbgui_pop_item_width())
-RECOMP_IMPORT("*", s32 dbgui_begin_tab_bar(const char *str_id))
+RECOMP_IMPORT("*", long dbgui_begin_tab_bar(const char *str_id))
 RECOMP_IMPORT("*", void dbgui_end_tab_bar())
-RECOMP_IMPORT("*", s32 dbgui_begin_tab_item(const char *label, s32 *open))
+RECOMP_IMPORT("*", long dbgui_begin_tab_item(const char *label, long *open))
 RECOMP_IMPORT("*", void dbgui_end_tab_item())
 RECOMP_IMPORT("*", void dbgui_push_str_id(const char *str_id))
 RECOMP_IMPORT("*", void dbgui_pop_id())
-RECOMP_IMPORT("*", s32 dbgui_is_item_hovered())
-RECOMP_IMPORT("*", void dbgui_get_display_size(f32 *width, f32 *height))
+RECOMP_IMPORT("*", long dbgui_is_item_hovered())
+RECOMP_IMPORT("*", void dbgui_get_display_size(float *width, float *height))
 typedef struct {
     float r;
     float g;
     float b;
     float a;
 } DbgUiColor;
-RECOMP_IMPORT("*", u32 dbgui_color_float4_to_u32(const DbgUiColor *color))
-RECOMP_IMPORT("*", void dbgui_foreground_text(const DbgUiPos *pos, u32 color, const char *text))
+RECOMP_IMPORT("*", unsigned long dbgui_color_float4_to_u32(const DbgUiColor *color))
+RECOMP_IMPORT("*", void dbgui_foreground_text(const DbgUiPos *pos, unsigned long color, const char *text))
 typedef struct {
     DbgUiPos p1;
     DbgUiPos p2;
-    u32 color;
+    unsigned long color;
     float thickness;
 } DbgUiLine;
 RECOMP_IMPORT("*", void dbgui_foreground_line(const DbgUiLine *line))
 typedef struct {
     DbgUiPos center;
     float radius;
-    u32 color;
-    s32 numSegments;
+    unsigned long color;
+    long numSegments;
     float thickness;
 } DbgUiCircle;
 RECOMP_IMPORT("*", void dbgui_foreground_circle(const DbgUiCircle *circle))
 typedef struct {
     DbgUiPos center;
     float radius;
-    u32 color;
-    s32 numSegments;
+    unsigned long color;
+    long numSegments;
 } DbgUiCircleFilled;
 RECOMP_IMPORT("*", void dbgui_foreground_circle_filled(const DbgUiCircleFilled *circle))
 typedef struct {
     DbgUiPos center;
     float radiusX;
     float radiusY;
-    u32 color;
+    unsigned long color;
     float rotation;
-    s32 numSegments;
+    long numSegments;
     float thickness;
 } DbgUiEllipse;
 RECOMP_IMPORT("*", void dbgui_foreground_ellipse(const DbgUiEllipse *ellipse))
@@ -131,22 +130,22 @@ typedef struct {
     DbgUiPos center;
     float radiusX;
     float radiusY;
-    u32 color;
+    unsigned long color;
     float rotation;
-    s32 numSegments;
+    long numSegments;
 } DbgUiEllipseFilled;
 RECOMP_IMPORT("*", void dbgui_foreground_ellipse_filled(const DbgUiEllipseFilled *ellipse))
 typedef struct {
     DbgUiPos min;
     DbgUiPos max;
-    u32 color;
+    unsigned long color;
     float thickness;
 } DbgUiRect;
 RECOMP_IMPORT("*", void dbgui_foreground_rect(const DbgUiRect *rect))
 typedef struct {
     DbgUiPos min;
     DbgUiPos max;
-    u32 color;
+    unsigned long color;
 } DbgUiRectFilled;
 RECOMP_IMPORT("*", void dbgui_foreground_rect_filled(const DbgUiRectFilled *rect))
 

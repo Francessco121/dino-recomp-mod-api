@@ -1,22 +1,16 @@
-# Dinosaur Planet: Recompiled Mod API
-This repository contains everything necessary to create mods for [Dinosaur Planet: Recompiled](https://github.com/Francessco121/dino-recomp), including:
+# Dinosaur Planet: Recompiled - Mod API
+This repository contains headers for creating mods for [Dinosaur Planet: Recompiled](https://github.com/Francessco121/dino-recomp), including:
 
-- Symbol definitions
-- Decompilation headers
-- Recomp modding headers
-- Recomp-specific headers for Dinosaur Planet DLLs
+- Macros for annotating function patches, hooks, and more.
+- Imports for all functions made available to mods from recomp itself.
 
 ## Writing Mods
 Please see the [Recomp Modding](https://hackmd.io/fMDiGEJ9TBSjomuZZOgzNg) document for a general explanation of the N64 recomp modding framework.
 
-## Regenerating Symbols
-When updating to a new version of the decompilation, the symbol TOML files and DLL headers must be regenerated.
+> [!TIP]
+> You will also need the [Decomp Bridge](https://github.com/Francessco121/dino-recomp-decomp-bridge) to create your mod. Please see the [official mod template](https://github.com/Francessco121/dino-recomp-mod-template) for an example setup.
 
-### 1. Build the Decompilation Project
-Follow the build instructions in [the decompilation readme](./dinosaur-planet/README.md). An up-to-date `build/dino.elf` file is required for the next step.
+## Versioning
+Mod API releases are associated with a specific version of the decomp. For example, to target version 0.1.2 of the recomp you would use version 0.1.2 of this repository. The `minimum_recomp_version` property of your mod's TOML manifest should equal the recomp version targeted by the checked out commit of this repository.
 
-### 2. Regenerate Symbols
-Run the following tool (from this directory) to regenerate symbols and recomp DLL headers:
-```bash
-python ./dinosaur-planet/tools/gen_recomp_syms.py
-```
+Please do not use commits ahead of the latest tagged version for stable published mods as it does not guarantee your mod will work correctly on any stable recomp release.
